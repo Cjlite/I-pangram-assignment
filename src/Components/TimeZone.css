@@ -40,12 +40,15 @@ font-weight: bold;
 
 
 .tableContainer {
+  width: 90rem;
+  margin-top: 20px;
   font-family: Arial, sans-serif;
 }
 .table {
-  border-collapse: collapse;
   width: 100%;
+  border-collapse: collapse;
   margin-bottom: 20px;
+  margin-left: 50px;
 }
 .table td {
   border: 1px solid #ddbdbd;
