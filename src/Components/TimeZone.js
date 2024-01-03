@@ -134,7 +134,7 @@ const Task = () => {
     const days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
 
     return (
-      <div className="days-with-time">
+      <div className="">
         {days.map((day, dayIndex) => {
           const currentDate = new Date(
             currentStartDate.getFullYear(),
@@ -152,7 +152,7 @@ const Task = () => {
                 <div>{day}</div>
                 <div>{formattedDate}</div>
               </div>
-              <div className="time-options">{renderTimeOptions(dayIndex)}</div>
+              <div className="">{renderTimeOptions(dayIndex)}</div>
             </div>
           );
         })}
@@ -164,7 +164,7 @@ const Task = () => {
     const timezoneOptions = { timeZone: selectedTimezone };
 
     return (
-      <div className="time-options">
+      <div className="">
         {timeOptionsByDay[dayIndex]?.map(
           ({ hour, formattedHour, period, isChecked }, index) => {
             const date = new Date(currentStartDate);
@@ -252,7 +252,7 @@ const Task = () => {
                 <tr className="tableRow">
                   <td>Time:</td>
                   <td>
-                    {((res?.time?.split(" ")[0] || "").split(" ") || [])
+                    {((res?.time.split(" ")[0] || "").split(" ") || [])
                       .filter((time) => time)
                       .map((time, index) => (
                         <span key={index}>{time}</span>
