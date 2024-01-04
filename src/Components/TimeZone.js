@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "../Components/TimeZone.css";
 import { BiSolidLeftArrow, BiSolidRightArrow } from "react-icons/bi";
-import Calender from "../Components/Calender";
 import { Link } from "react-router-dom";
 
 const TimeZone = () => {
@@ -235,9 +234,6 @@ const TimeZone = () => {
               <option value="America/New_York">Eastern Time (ET)</option>
             </select>
           </div>
-          <Link className="Calender" to="/SortedJson">
-            <Calender />
-          </Link>
         </div>
         <div className="working-hours">{renderDaysWithTime()}</div>
       </div>
