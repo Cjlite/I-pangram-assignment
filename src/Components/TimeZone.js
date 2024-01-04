@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import "../Components/TimeZone.css";
 import { BiSolidLeftArrow, BiSolidRightArrow } from "react-icons/bi";
+import Calender from "../Components/Calender";
+import { Link } from "react-router-dom";
 
 const TimeZone = () => {
   const [currentStartDate, setCurrentStartDate] = useState(new Date());
@@ -221,16 +223,21 @@ const TimeZone = () => {
       </div>
 
       <div className="timeStampContainer">
-        <div className="timeStamp">
-          <label>Timezone:</label>
-          <select
-            id="timezoneSelect"
-            value={selectedTimezone}
-            onChange={handleTimezoneChange}
-          >
-            <option value="UTC">UTC</option>
-            <option value="America/New_York">Eastern Time (ET)</option>
-          </select>
+        <div className="timeStampContainer1">
+          <div className="timeStamp">
+            <label>Timezone:</label>
+            <select
+              id="timezoneSelect"
+              value={selectedTimezone}
+              onChange={handleTimezoneChange}
+            >
+              <option value="UTC">UTC</option>
+              <option value="America/New_York">Eastern Time (ET)</option>
+            </select>
+          </div>
+          <Link className="Calender" to="/SortedJson">
+            <Calender />
+          </Link>
         </div>
         <div className="working-hours">{renderDaysWithTime()}</div>
       </div>
