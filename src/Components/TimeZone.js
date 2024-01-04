@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "../Components/TimeZone.css";
 import { BiSolidLeftArrow, BiSolidRightArrow } from "react-icons/bi";
 
-const Task = () => {
+const TimeZone = () => {
   const [currentStartDate, setCurrentStartDate] = useState(new Date());
   const [selectedTimezone, setSelectedTimezone] = useState("Asia/Kolkata");
   const [currentTime, setCurrentTime] = useState(new Date());
@@ -271,4 +271,4 @@ const Task = () => {
   );
 };
 
-export default Task;
+export default TimeZone;
