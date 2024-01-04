@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "../Components/TimeZone.css";
 import { BiSolidLeftArrow, BiSolidRightArrow } from "react-icons/bi";
-import { Link } from "react-router-dom";
 
 const TimeZone = () => {
   const [currentStartDate, setCurrentStartDate] = useState(new Date());
