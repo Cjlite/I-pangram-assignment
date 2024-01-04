@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "../Components/TimeZone.css";
 import { BiSolidLeftArrow, BiSolidRightArrow } from "react-icons/bi";
 
-const Task = () => {
+const TimeZone = () => {
   const [currentStartDate, setCurrentStartDate] = useState(new Date());
   const [selectedTimezone, setSelectedTimezone] = useState("Asia/Kolkata");
   const [currentTime, setCurrentTime] = useState(new Date());
@@ -181,16 +181,16 @@ const Task = () => {
 
             return (
               // <div className="checkboxContainer">
-                <label key={hour} className="checkbox">
-                  <input
-                    type="checkbox"
-                    name={`time-${dayIndex}`}
-                    value={formattedTime}
-                    checked={isChecked}
-                    onChange={() => handleTimeChange(dayIndex, index)}
-                  />
-                  {formattedTime}
-                </label>
+              <label key={hour} className="checkbox">
+                <input
+                  type="checkbox"
+                  name={`time-${dayIndex}`}
+                  value={formattedTime}
+                  checked={isChecked}
+                  onChange={() => handleTimeChange(dayIndex, index)}
+                />
+                {formattedTime}
+              </label>
               // </div>
             );
           }
@@ -206,11 +206,14 @@ const Task = () => {
           <BiSolidLeftArrow className="icon" />
           <span className="arrowText">Previous Week</span>
         </div>
-        <div className="defauldDate">{`${currentStartDate.toLocaleDateString("default", {
-          month: "long",
-          day: "numeric",
-          year: "numeric",
-        })}`}</div>
+        <div className="defauldDate">{`${currentStartDate.toLocaleDateString(
+          "default",
+          {
+            month: "long",
+            day: "numeric",
+            year: "numeric",
+          }
+        )}`}</div>
         <div className="topRight" onClick={handleNext}>
           <span className="arrowText">Next Week</span>
           <BiSolidRightArrow className="icon" />
@@ -268,4 +271,4 @@ const Task = () => {
   );
 };
 
-export default Task;
+export default TimeZone;
