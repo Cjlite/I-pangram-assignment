@@ -1,10 +1,10 @@
-import './App.css';
-import Task from './Components/TimeZone';
+import "./App.css";
+import TimeZone from "./Components/Timezone";
 
 function App() {
   return (
     <div className="">
-      <Task/>
+      <TimeZone />
     </div>
   );
 }
